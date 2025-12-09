@@ -1,21 +1,44 @@
-# OSIE-OCL
+# OSIE-OCL — Public Coordination Layer
 
-The **OSIE-OCL (Public Coordination Layer)** is the public-facing module derived from the OSIE Structural Architecture.  
-It provides a simplified, open-source interface for evaluating emotional-volatility axes and generating safe,  
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)  
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue.svg)]()  
+[![Status: Public Module](https://img.shields.io/badge/Status-Public%20Layer-brightgreen.svg)]()
+
+The **OSIE-OCL (Public Coordination Layer)** is the open-source, public-facing module derived from the OSIE Structural Architecture.  
+It provides a simplified interface for evaluating emotional-volatility axes and generating safe, deterministic  
 public coordination recommendations.
 
-This layer does **not** expose OSIE’s internal physics, laws, indices, or systemic architecture.  
-It is intentionally constrained to a lightweight, public-safe analytical surface.
+This layer does **not** expose OSIE’s internal physics, proprietary indices, or systemic laws.  
+It is intentionally restricted to a lightweight, public-safe analytical surface.
 
 ---
 
 ## 📦 Features
 
-- Computes **coherence** and **mismatch** between a current state and baseline state  
-- Classifies **volatility levels**: `Stable`, `Tense`, `Critical`  
+- Computes **coherence** and **mismatch** between a current and baseline state  
+- Classifies **volatility phases**: `Stable`, `Tense`, `Critical`  
 - Produces recommended **actions**: `Wait`, `Observe`, `Post`, `Thread`, `Meme`  
 - Fully open-source TypeScript module  
-- Safe for public research, demos, and educational use
+- Deterministic execution, no training data, no proprietary physics  
+- Safe for public demos, research, integrations, and agent experiments  
+
+---
+
+## 📥 Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/MyOmniInstitute/OSIE-OCL.git
+cd OSIE-OCL
+npm install
+```
+
+Import into a TypeScript project:
+
+```ts
+import { OCL } from "./src/ocl";
+```
 
 ---
 
@@ -44,7 +67,7 @@ const result = OCL(current, baseline);
 console.log(result);
 ```
 
-**Example output**
+**Example Output**
 ```json
 {
   "coherence": 58,
@@ -64,7 +87,7 @@ See: `docs/architecture.md`
 
 ### Example Evaluations  
 See: `docs/examples.md`  
-These examples demonstrate behavior but do not reveal internal OSIE mechanics.
+These examples demonstrate the behavior of the public-facing layer but do **not** reveal OSIE’s internal mechanics.
 
 ---
 
