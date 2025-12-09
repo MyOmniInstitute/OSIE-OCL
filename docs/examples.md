@@ -1,11 +1,12 @@
-# OSIE-OCL Example Evaluations
+# OSIE-OCL — Example Evaluations
 
-This document provides simple, public demonstrations of how the OCL module
-evaluates axis states and produces a coordination recommendation.
+These examples demonstrate how the public-facing OCL module behaves under
+different volatility conditions.  
+They do **not** reveal OSIE’s internal indices, physics, or structural laws.
 
 ---
 
-## Example 1 — Calm Baseline
+## Example 1 — Stable
 
 **Input**
 ```json
@@ -13,65 +14,71 @@ evaluates axis states and produces a coordination recommendation.
   "current":  { "rage": 10, "euphoria": 15, "dread": 8, "copium": 12, "chaos": 10 },
   "baseline": { "rage": 12, "euphoria": 14, "dread": 10, "copium": 12, "chaos": 12 }
 }
+```
 
-Output
+**Output**
+```json
 {
   "coherence": 92,
   "mismatch": 3,
   "volatility": "Stable",
-  "action": "Thread",
-  "timestamp": 1733870000000
+  "action": "Thread"
 }
+```
 
-Interpretation
-Low divergence → Stable → Safe for structured action (threading, analysis).
+**Interpretation**  
+Low divergence → Stable → Structured communication recommended.
 
-⸻
+---
 
-Example 2 — Medium Divergence / Tense State
+## Example 2 — Tense
 
-Input
-
+**Input**
+```json
 {
   "current":  { "rage": 40, "euphoria": 22, "dread": 30, "copium": 50, "chaos": 32 },
   "baseline": { "rage": 15, "euphoria": 14, "dread": 12, "copium": 18, "chaos": 10 }
 }
-Output
+```
+
+**Output**
+```json
 {
   "coherence": 58,
   "mismatch": 29,
   "volatility": "Tense",
-  "action": "Post",
-  "timestamp": 1733870100000
+  "action": "Post"
 }
-Interpretation
-Moderate mismatch → Tense → Use caution, limit complexity.
+```
 
-⸻
+**Interpretation**  
+Moderate mismatch → Tense → Limit complexity, avoid escalation.
 
-Example 3 — Critical Volatility
+---
 
-Input
+## Example 3 — Critical
+
+**Input**
+```json
 {
   "current":  { "rage": 90, "euphoria": 5, "dread": 85, "copium": 10, "chaos": 92 },
   "baseline": { "rage": 12, "euphoria": 14, "dread": 10, "copium": 12, "chaos": 12 }
 }
-Output
+```
+
+**Output**
+```json
 {
   "coherence": 14,
   "mismatch": 72,
   "volatility": "Critical",
-  "action": "Meme",
-  "timestamp": 1733870200000
+  "action": "Meme"
 }
-Interpretation
-High mismatch + high chaos → Critical → Only lightweight expressive outputs.
+```
 
-⸻
+**Interpretation**  
+High volatility → Only lightweight, expressive actions are safe.
 
-Notes
+---
 
-These examples are purely demonstrative and do not expose or imply OSIE’s
-internal physics, indices, or analytic laws.
-They exist to show how the public-facing OCL module behaves under varying
-input conditions.
+© 2025 Chris Meadows / Omni Institute
