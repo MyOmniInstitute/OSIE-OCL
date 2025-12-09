@@ -1,3 +1,8 @@
+<p align="center">
+  <img src="https://raw.githubusercontent.com/MyOmniInstitute/OSIE-OCL/main/1B859E78-68F9-4F8E-995C-8BBEC4320A27.png" 
+       alt="OSIE-OCL Banner" 
+       width="100%">
+</p>
 # OSIE-OCL — Public Coordination Layer
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)  
