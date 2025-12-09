@@ -1,0 +1,21 @@
+{
+  "name": "osie-ocl",
+  "version": "1.0.0",
+  "description": "OSIE-OCL — Public Coordination Layer derived from the OSIE Structural Architecture. Deterministic emotional-volatility evaluation and safe coordination recommendations.",
+  "main": "src/ocl.ts",
+  "types": "src/ocl.ts",
+  "scripts": {
+    "test": "echo \"No tests yet\""
+  },
+  "keywords": [
+    "OSIE",
+    "OCL",
+    "emotional-modeling",
+    "coordination-layer",
+    "typescript",
+    "deterministic",
+    "public-module"
+  ],
+  "author": "Chris Meadows (Omni Institute)",
+  "license": "MIT"
+}
