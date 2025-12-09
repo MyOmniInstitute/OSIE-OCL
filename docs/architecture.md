@@ -1,85 +1,98 @@
-# OSIE-OCL Architecture Overview
+# OSIE-OCL — Public Architecture Overview
 
-OSIE-OCL (Coordination Layer) is a public-facing module derived from the broader
-OSIE (Operational Structural Integrity Engine) conceptual framework.
-
-This module does *not* contain OSIE’s internal indices, physics, or systemic
-analytics. Instead, it provides a safe, open coordination layer that:
-- receives simple directional signals,
-- compares them against baselines,
-- evaluates coherence and mismatch,
-- classifies volatility,
-- and recommends a lightweight coordination action.
-
-## 1. Axes
-
-The OCL analyzes five axes:
-
-- rage – adversarial activation
-- euphoria – positive destabilizing activation
-- dread – anticipatory fear
-- copium – cognitive denial
-- chaos – unstructured noise
-
-Each value is expressed on a 0–100 scale.
-
-These axes do *not* correspond to OSIE’s internal indices (ELI, PEI, PLD).
-They represent a simplified interface for experimentation and coordination.
+The **OSIE-OCL (Public Coordination Layer)** is a deterministic, disclosure-safe
+subset of the full OSIE Structural Architecture.  
+It provides a lightweight public mechanism for evaluating emotional-volatility 
+axes and generating safe coordination recommendations without exposing any
+internal OSIE physics, indices, or law-structures.
 
 ---
 
-## 2. Coherence Computation
+## 🧱 What OCL *Is*
 
-Coherence represents directional alignment.  
-Mismatch represents directional divergence.
-
-Both are computed using a weighted deviation between current axes and the
-baseline state.
-
-Values: 0–100
+- A minimal public layer for interpreting axis divergence  
+- A stable, open-source TypeScript module  
+- A deterministic evaluator (no machine learning, no training data)  
+- A simplified surface for research, demos, and agent builders  
 
 ---
 
-## 3. Volatility Classification
+## 🔒 What OCL *Is Not*
 
-Based on total mismatch + chaos:
+- It does **not** reveal OSIE’s internal mathematics  
+- It does **not** expose systemic fragility indices (ELI, PEI, PLD)  
+- It does **not** include sovereign-scale or corporate-scale structural physics  
+- It does **not** compute regenerative/extractive flows  
 
-- Stable – low divergence  
-- Tense – medium divergence  
-- Critical – high divergence  
-
-This provides a simple behavioral envelope for downstream models.
-
----
-
-## 4. Recommended Action
-
-The OCL suggests one of the following:
-
-- Wait  
-- Observe  
-- Post  
-- Meme  
-- Triage  
-
-These are placeholders for public-safe experimentation and are not linked to
-OSIE’s internal operational stack.
+This ensures the core OSIE engine remains sovereign and protected.
 
 ---
 
-## 5. Timestamp
+## 📊 Public Axis Model
 
-Each evaluation returns a Unix timestamp for synchronization with external
-systems.
+OCL evaluates five emotional-volatility axes:
+
+- **rage**
+- **euphoria**
+- **dread**
+- **copium**
+- **chaos**
+
+Each axis operates on a 0–100 range.
 
 ---
 
-## Purpose of This Module
+## 🧮 Core Mechanics
 
-The OCL provides a *public coordination interface* for research and AI
-experiments while preserving sovereignty over OSIE’s core engine.
+### 1. **Mismatch**
+Measures magnitude of divergence between current and baseline state.
 
-This module:
-- establishes authorship and namespace priority,
-- defines a safe conceptual layer,
-- and enables demonstration of coordination logic without exposing OSIE itself.
+```
+mismatch = sqrt(Σ (current_i - baseline_i)²) / 5
+```
+
+### 2. **Coherence**
+Inverse of mismatch:
+
+```
+coherence = 100 - mismatch
+```
+
+### 3. **Volatility Classification**
+- `< 20`  → **Stable**  
+- `< 50`  → **Tense**  
+- `>= 50` → **Critical**
+
+### 4. **Action Selector**
+Maps volatility → recommended behavior:
+- Stable → Thread / Post  
+- Tense → Post  
+- Critical → Meme  
+
+---
+
+## 🧠 Why This Layer Exists
+
+This module allows the public to work with a small, safe portion of OSIE without
+exposing:
+
+- internal indices  
+- structural thresholds  
+- multi-layer physics  
+- regenerative flow models  
+- sovereign diagnostic logic  
+
+OCL provides *just enough* structure for experimentation, without leaking the
+intellectual foundation that powers OSIE.
+
+---
+
+## 📌 Versioning Policy
+
+- OCL follows semantic versioning (`v1.x.x`).  
+- Breaking changes will only occur with explicit version bumps.  
+- The internal OSIE engine may evolve independently and is not public.
+
+---
+
+© 2025 Chris Meadows / Omni Institute
